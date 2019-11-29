@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 public class ListServlet extends HttpServlet {
@@ -22,7 +21,7 @@ public class ListServlet extends HttpServlet {
         List<String> names = model.list();
         req.setAttribute("userNames", names);
 
-        RequestDispatcher requestDispatcher  = req.getRequestDispatcher("views/list.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/list.jsp");
         requestDispatcher.forward(req, resp);
     }
 }
